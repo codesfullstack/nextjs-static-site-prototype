@@ -1,0 +1,222 @@
+.carousel-container {
+    padding: 0;
+    position: relative;
+
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+   
+}
+
+.custom-image {
+    width: 100%;
+    filter: brightness(0.7);
+}
+
+.loading-bar {
+    height: 5px;
+    width: 0%;
+    position: absolute;
+    
+    animation: grow-width 8s infinite;
+    overflow: hidden;
+
+    /* background: greenyellow;
+    bottom: 4px; */
+    background: orange;
+    bottom: 0px;
+}
+
+@keyframes grow-width {
+    100% {
+        width: 100%;
+    }
+}
+
+.arrow-container {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 48%;
+    width: 100%;
+}
+
+
+
+.arrow-left,
+.arrow-right {
+    font-size: 5vw;
+    color: white;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+    opacity: 0.8;
+}
+
+.arrow-left {
+    padding-left: 3%;
+}
+
+.arrow-right {
+    padding-right: 3%;
+    /* z-index: 3; */
+}
+
+
+ 
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(90%);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fade-in 4s ease-in-out;
+}
+  
+/* .split-text-container {
+    display: flex;
+    font-size: 4vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: greenyellow;
+    position: absolute;
+ 
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
+    overflow: hidden;
+ 
+    height: 500px;
+    top: 69%;
+    left: 50%;
+}
+  */
+
+  .split-text-container {
+    display: block;
+    font-size: 4vw;                 /* Asegura que el tamaño del texto sea relativo al contenedor */
+    font-weight: bold;
+    text-transform: uppercase;
+    color: greenyellow;
+    position: absolute;
+    top: 50%;                       /* Centra el contenedor del texto verticalmente */
+    left: 50%;                      /* Centra el contenedor del texto horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición para que quede perfectamente centrado */
+    width: 80%;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* logo */
+
+
+/* .split-logo {
+    display: flex;
+    font-size: 4vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: greenyellow;
+    position: absolute;
+ 
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
+    overflow: hidden;
+ 
+    height: 500px;
+    top: 69%;
+    left: 50%;
+}
+ */
+
+ .split-logo {
+    display: block;
+    font-size: 4vw;                  
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    position: absolute;
+    top: 30%;                        
+    left: 50%;                      
+    transform: translateX(-50%);     
+    width: 80%;
+    text-align: center;
+    overflow: hidden;
+    
+
+ 
+}
+
+/* @keyframes fade-top {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-50%);
+    }
+} */
+
+
+
+  
+
+@keyframes fade-top {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%); /* Moverlo completamente arriba */
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0); /* Regresa a su posición normal */
+    }
+}
+
+.fade-top {
+    animation: fade-top 4s ease-in-out;
+}
+ 
+
+
+
+
+/* logo  */
+ 
+.text-part {
+    display: inline-block;
+}
+
+@keyframes fadeInOut {
+    0%, 10% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+}
+
+@keyframes mymove {
+    from {
+        top: 60%;
+    }
+    to {
+        top: 0%;
+    }
+}
+
+
+ 

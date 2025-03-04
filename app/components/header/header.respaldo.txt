@@ -1,0 +1,304 @@
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+}
+
+.header-container:hover {
+    box-shadow: 0 5px 5px rgb(77, 62, 62);
+}
+
+.logo {
+    background-color: black;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.nav {
+    background-color: gray;
+    width: 80%;
+    justify-content: center;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 45px;
+    color: white;
+}
+
+.a-item {
+    transition-property: scale;
+    transition-duration: 0.9s;
+    transition-timing-function: ease-out;
+    color: white;
+}
+
+.a-item:hover {
+    scale: 1.1;
+    box-shadow: 0 2px 0 white;
+}
+
+.ul-list {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    list-style-type: none;
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav-hamburger {
+    display: none !important;
+}
+
+@media screen and (min-width: 720px) and (max-width: 1024px) {
+    .header-container {
+        flex-direction: column;
+        justify-content: center;
+
+        width: 100%;
+    }
+
+    .logo {
+        background-color: black;
+        width: 100%;
+        height: 30px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .nav {
+        background-color: gray;
+        width: 100%;
+        justify-content: center;
+        height: 30px;
+        padding-bottom: 15px;
+    }
+
+    .nav-mobile {
+        display: none;
+        padding-top: 20px;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 720px) {
+    .header-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .logo {
+        background-color: black;
+        width: 40%;
+        height: 60px;
+    }
+
+    .nav {
+        background-color: gray;
+        width: 70%;
+        justify-content: center;
+        height: 60px;
+        padding-bottom: 15px;
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        width: 60%;
+        color: aqua;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        padding-right: 15px;
+        background: gray;
+        border: 1px solid 0cap;
+    }
+
+    /* .nav-hamburger {
+        display: flex;
+        width: 40%;
+        height: 400px;
+        background-color: #00f;
+        flex-direction: column;
+
+        position: fixed;
+        right: 0;
+        padding-right: 30px;
+        margin-right: 80px;
+        top: 120px;
+    } */
+
+    .nav-hamburger {
+        /* display: flex; */
+        display: flex !important;
+        /* Forzar display: flex */
+        width: 35%;
+        height: 270px;
+        background-color: #00f;
+        /* flex-direction: column; */
+        /* flex-direction: row-reverse !important; */
+        flex-direction: column;
+
+        position: fixed;
+        right: 0;
+        padding-right: 30px;
+        margin-right: 80px;
+        top: 120px;
+    }
+
+
+    /* .nav {
+        display: none;
+    } */
+
+    .ul-list {
+        /* display: flex;
+        flex-direction: row;
+        gap: 50px; */
+        flex-direction: column;
+        list-style-type: none;
+        gap: 10px;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+    .header-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .logo {
+        background-color: black;
+        width: 40%;
+        height: 60px;
+    }
+
+    .hamburger {
+        display: flex;
+        width: 60%;
+        color: aqua;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        padding-right: 15px;
+        background: gray;
+        border: 1px solid 0cap;
+    }
+
+    .nav-hamburger {
+        /* display: flex; */
+        display: flex !important;
+        /* Forzar display: flex */
+        width: 35%;
+        background-color: rgb(155, 155, 161);
+        /* flex-direction: column; */
+        /* flex-direction: row-reverse !important; */
+        flex-direction: column;
+
+        position: fixed;
+        right: 0;
+        /* padding-right: 30px; */
+        margin-right: 32px;
+        top: 72px;
+
+        /* height: 270px; */
+
+        user-select: none;
+        /* evitar seleccion de txto*/
+
+        opacity: 0;
+        /* Comienza invisible */
+        height: auto;
+        /* Esto asegura que se ajuste al contenido */
+        max-height: 0;
+        /* Inicialmente cerrado (sin altura visible) */
+        transition: transform 0.5s ease, opacity 0.5s ease, max-height 0.5s ease-out;
+
+
+    }
+
+    .nav-hamburger.active {
+        opacity: 1;
+        /* Lo hace visible */
+        right: 0;
+        /* Lo mueve a la derecha */
+        max-height: 500px;
+        /* Ajusta según el contenido */
+    }
+
+
+    .ul-list {
+        display: flex;
+        flex-direction: row;
+        /* gap: 50px; */
+        gap: 10px;
+        list-style-type: none;
+    }
+
+    .nav-mobile {
+        /* background-color: rgb(78, 177, 122); */
+        /* width: 100%; */
+        justify-content: center;
+        /* height: 30px; */
+        /* padding-bottom: 15px; */
+
+        /* display: flex; */
+        flex-direction: column;
+        padding-top: 20px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .ul-list {
+        /* display: flex;
+        flex-direction: row;
+        gap: 50px; */
+        flex-direction: column;
+        list-style-type: none;
+    }
+
+    .item-menu {
+        /* background-color: rgb(182, 165, 119); */
+        /* width: 100%; */
+        /* transition-property: background; */
+
+        display: inline-block;
+        /* para el fondo*/
+        transition: background 0.7s ease;
+        width: auto;
+    }
+
+    .item-menu:hover {
+        background: rgb(48, 45, 45);
+
+        /* width: 100%; */
+    }
+
+    .texto-mobile {
+
+        /* transition: scale 1s ease; */
+        color: white;
+
+
+    }
+
+    .texto-mobile:hover {
+        scale: 1.4;
+        transform-origin: left;
+        /* punto desde donde se agranda*/
+    }
+
+
+
+}
